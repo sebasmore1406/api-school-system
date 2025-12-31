@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="es-MX">
+
+<!-- Para juntar el frontend con el backend, se usará un JSON Web Token (JWT) -->
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="assets/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="css/students.css">
+    <script src="js/main.js" defer></script>
+    <title>Gestión de Estudiantes</title>
+</head>
+
+<!--
+    #  = id 
+    .  = class
+    [] = parámetros
+    {} = texto
+    >  = un nivel abajo
+    +  = en el mismo nivel
+-->
+
+<body>
+    <header>
+        <h1>Sistema de Control Escolar | Universidad de Habas</h1>
+        <div class="search-bar">
+            <input type="text" id="searchInput" placeholder="Buscar por nombre...">
+            <button id="searchBtn">Buscar</button>
+        </div>
+    </header>
+    <main>
+        <section class="form-section">
+            <h2>Agregar / Editar estudiante</h2>
+        </section>
+        <form action="" id="student-form">
+            <input type="hidden" id="studentID">
+            <input type="text" id="nombre" placeholder="Nombre" required="required">
+            <input type="number" id="edad" placeholder="Edad">
+            <input type="text" id="career" placeholder="Carrera">
+            <input type="number" id="semester" placeholder="Semestre">
+            <input type="number" id="average" placeholder="Promedio">
+            <input type="text" id="courses" placeholder="Materias (separadas por comas)">
+            <button type="submit">Guardar</button>
+            <button id="cancelEdit" type="button" class="secondary">Cancelar</button>
+        </form>
+        <section class="list-section">
+            <h2>Listado de Estudiantes</h2>
+            <table id="studentsTable">
+                <thead>
+                    <tr>
+                        <th>Matrícula</th>
+                        <th>Nombre</th>
+                        <th>Edad</th>
+                        <th>Carrera</th>
+                        <th>Semestre</th>
+                        <th>Promedio</th>
+                        <th>Materias</th>
+                        <th>Acciones</th>
+                    </tr>
+                </thead>
+                <tbody id="studentsData"></tbody>
+            </table>
+        </section>
+    </main>
+    <footer>
+        <p>&copy;2025 Todos los derechos reservados | Universidad de Habas</p>
+    </footer>
+</body>
+
+</html>
